@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="HTML5,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="用于绘画的 canvas 元素用于媒介回放的 video 和 audio 元素对本地离线存储的更好的支持新的特殊内容元素，比如 article、footer、header、nav、section新的表单控件，比如 calendar、date、time、email、url、search    用于绘画的 canvas 元素canvas标签定义图形，比如图表和其他图像。canvas标签只是图形容器，您">
+<meta name="keywords" content="HTML5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5新特性">
+<meta property="og:url" content="http://yoursite.com/2018/07/17/HTML5新特性/index.html">
+<meta property="og:site_name" content="凌晨四点的拖拉机">
+<meta property="og:description" content="用于绘画的 canvas 元素用于媒介回放的 video 和 audio 元素对本地离线存储的更好的支持新的特殊内容元素，比如 article、footer、header、nav、section新的表单控件，比如 calendar、date、time、email、url、search    用于绘画的 canvas 元素canvas标签定义图形，比如图表和其他图像。canvas标签只是图形容器，您">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-05-25T17:52:19.223Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5新特性">
+<meta name="twitter:description" content="用于绘画的 canvas 元素用于媒介回放的 video 和 audio 元素对本地离线存储的更好的支持新的特殊内容元素，比如 article、footer、header、nav、section新的表单控件，比如 calendar、date、time、email、url、search    用于绘画的 canvas 元素canvas标签定义图形，比如图表和其他图像。canvas标签只是图形容器，您">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/17/HTML5新特性/">
+
+
+
+
+
+  <title>HTML5新特性 | 凌晨四点的拖拉机</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">凌晨四点的拖拉机</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">实现目标的过程与目标本身一样重要</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/HTML5新特性/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hyman Choi">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="凌晨四点的拖拉机">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HTML5新特性</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-17T01:22:04+08:00">
+                2018-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>用于绘画的 canvas 元素<br>用于媒介回放的 video 和 audio 元素<br>对本地离线存储的更好的支持<br>新的特殊内容元素，比如 article、footer、header、nav、section<br>新的表单控件，比如 calendar、date、time、email、url、search  </p>
+<hr>
+<h3 id="用于绘画的-canvas-元素"><a href="#用于绘画的-canvas-元素" class="headerlink" title="用于绘画的 canvas 元素"></a>用于绘画的 canvas 元素</h3><p>canvas标签定义图形，比如图表和其他图像。<br>canvas标签只是图形容器，您必须使用脚本来绘制图形。<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;myCanvas&quot;&gt;&lt;/canvas&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">var canvas=document.getElementById(&apos;myCanvas&apos;);</span><br><span class="line">var ctx=canvas.getContext(&apos;2d&apos;);</span><br><span class="line">ctx.fillStyle=&apos;#FF0000&apos;;</span><br><span class="line">ctx.fillRect(0,0,80,100);</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="用于媒介回放的-video-和-audio-元素"><a href="#用于媒介回放的-video-和-audio-元素" class="headerlink" title="用于媒介回放的 video 和 audio 元素"></a>用于媒介回放的 video 和 audio 元素</h3><h4 id="video"><a href="#video" class="headerlink" title="video"></a>video</h4><p>video元素支持三种视频格式：MP4,WebM和Ogg:<br>MP4 = 带有H.264视频编码和AAC音频编码的MPEG4文件<br>WebM = 带有VP8视频编码和Vorbis音频编码的WebM文件<br>Ogg = 带有Theora视频编码和Vorbis音频编码的Ogg文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;</span><br><span class="line">  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot;&gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="audio"><a href="#audio" class="headerlink" title="audio"></a>audio</h4><p>audio元素支持三种音频格式文件:MP3,Wav和Ogg:<br>MP3 audio/mpeg<br>Ogg audio/ogg<br>Wav audio/wav  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio controls&gt;</span><br><span class="line">  &lt;source src=&quot;horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="对本地离线存储的更好的支持"><a href="#对本地离线存储的更好的支持" class="headerlink" title="对本地离线存储的更好的支持"></a>对本地离线存储的更好的支持</h3><p>HTML5引入了应用程序缓存，这意味着web应用可进行缓存，并可在没有因特网连接时进行访问。<br>应用程序缓存为应用带来三个优势：<br>1.离线浏览 - 用户可在应用离线时使用它们<br>2.速度 - 已缓存资源加载得更快<br>3.减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html manifest=&quot;demo.appcache&quot;&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">内容</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="新的特殊内容元素"><a href="#新的特殊内容元素" class="headerlink" title="新的特殊内容元素"></a>新的特殊内容元素</h3><h4 id="article"><a href="#article" class="headerlink" title="article"></a>article</h4><p>article标签定义外部的内容。<br>外部内容可以是来自一个外部的新闻提供者的一篇新的文章，或者来自blog的文本，或者是来自论坛的文本。亦或是来自其他外部源内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;article&gt;</span><br><span class="line">&lt;a href=&quot;http://www.apple.com&quot;&gt;Safari 5 released&lt;/a&gt;&lt;br /&gt;</span><br><span class="line">7 Jun 2010. Just after the announcement of the new iPhone 4 at WWDC, </span><br><span class="line">Apple announced the release of Safari 5 for Windows and Mac......</span><br><span class="line">&lt;/article&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="footer"><a href="#footer" class="headerlink" title="footer"></a>footer</h4><p>footer标签定义文档或节的页脚。<br>footer元素应当含有其包含元素的信息。<br>页脚通常包含文档的作者、版权信息、使用条款链接、联系信息等等。<br>您可以在一个文档中使用多个footer元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer&gt;</span><br><span class="line">  &lt;p&gt;Posted by: W3School&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;Contact information: &lt;a href=&quot;mailto:someone@example.com&quot;&gt;someone@example.com&lt;/a&gt;.&lt;/p&gt;</span><br><span class="line">&lt;/footer&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="header"><a href="#header" class="headerlink" title="header"></a>header</h4><p>header标签定义文档的页眉（介绍信息）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt;</span><br><span class="line">&lt;h1&gt;Welcome to my homepage&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;My name is Donald Duck&lt;/p&gt;</span><br><span class="line">&lt;/header&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;The rest of my home page...&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="nav"><a href="#nav" class="headerlink" title="nav"></a>nav</h4><p>nav标签定义导航链接的部分。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;nav&gt;</span><br><span class="line">&lt;a href=&quot;index.asp&quot;&gt;Home&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;html5_meter.asp&quot;&gt;Previous&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;html5_noscript.asp&quot;&gt;Next&lt;/a&gt;</span><br><span class="line">&lt;/nav&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="section"><a href="#section" class="headerlink" title="section"></a>section</h4><p>section标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;section&gt;</span><br><span class="line">  &lt;h1&gt;PRC&lt;/h1&gt;</span><br><span class="line">  &lt;p&gt;The People&apos;s Republic of China was born in 1949...&lt;/p&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="新的表单控件"><a href="#新的表单控件" class="headerlink" title="新的表单控件"></a>新的表单控件</h3><p>值    描述<br>button    定义可点击的按钮（大多与JavaScript使用来启动脚本）<br>checkbox    定义复选框。<br>color 5    定义拾色器。<br>date 5    定义日期字段（带有calendar控件）<br>datetime 5    定义日期字段（带有calendar和time控件）<br>datetime-local 5    定义日期字段（带有calendar和time控件）<br>month 5    定义日期字段的月（带有calendar控件）<br>week 5    定义日期字段的周（带有calendar控件）<br>time 5    定义日期字段的时、分、秒（带有time控件）<br>email 5    定义用于e-mail地址的文本字段<br>file    定义输入字段和”浏览…”按钮，供文件上传<br>hidden    定义隐藏输入字段<br>image    定义图像作为提交按钮<br>number 5    定义带有spinner控件的数字字段<br>password    定义密码字段。字段中的字符会被遮蔽。<br>radio    定义单选按钮。<br>range 5    定义带有slider控件的数字字段。<br>reset    定义重置按钮。重置按钮会将所有表单字段重置为初始值。<br>search 5    定义用于搜索的文本字段。<br>submit    定义提交按钮。提交按钮向服务器发送数据。<br>tel 5    定义用于电话号码的文本字段。<br>text    默认。定义单行输入字段，用户可在其中输入文本。默认是20个字符。<br>url 5    定义用于URL的文本字段。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML5/" rel="tag"><i class="fa fa-tag"></i> HTML5</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/14/emmet插件基本语法/" rel="next" title="emmet插件基本语法">
+                <i class="fa fa-chevron-left"></i> emmet插件基本语法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/20/CSS3新属性/" rel="prev" title="CSS3新属性">
+                CSS3新属性 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDQxNC8yMDk0Ng=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Hyman Choi</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/HymanChoi" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:HymanChoi@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#用于绘画的-canvas-元素"><span class="nav-number">1.</span> <span class="nav-text">用于绘画的 canvas 元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用于媒介回放的-video-和-audio-元素"><span class="nav-number">2.</span> <span class="nav-text">用于媒介回放的 video 和 audio 元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#video"><span class="nav-number">2.1.</span> <span class="nav-text">video</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#audio"><span class="nav-number">2.2.</span> <span class="nav-text">audio</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对本地离线存储的更好的支持"><span class="nav-number">3.</span> <span class="nav-text">对本地离线存储的更好的支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新的特殊内容元素"><span class="nav-number">4.</span> <span class="nav-text">新的特殊内容元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#article"><span class="nav-number">4.1.</span> <span class="nav-text">article</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#footer"><span class="nav-number">4.2.</span> <span class="nav-text">footer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#header"><span class="nav-number">4.3.</span> <span class="nav-text">header</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nav"><span class="nav-number">4.4.</span> <span class="nav-text">nav</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#section"><span class="nav-number">4.5.</span> <span class="nav-text">section</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新的表单控件"><span class="nav-number">5.</span> <span class="nav-text">新的表单控件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hyman Choi</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共3.7k字</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
