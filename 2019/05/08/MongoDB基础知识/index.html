@@ -79,15 +79,18 @@
 
 
 
+<meta name="description" content="MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。  MongoDB 创建数据库语法: 1use DATABASE_NAME  如果数据库不存在，则创建数据库，否则切换到指定数据库。  MongoDB 删除数据库">
 <meta name="keywords" content="MongoDB">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MongoDB基础知识">
 <meta property="og:url" content="http://yoursite.com/2019/05/08/MongoDB基础知识/index.html">
 <meta property="og:site_name" content="凌晨四点的拖拉机">
+<meta property="og:description" content="MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。  MongoDB 创建数据库语法: 1use DATABASE_NAME  如果数据库不存在，则创建数据库，否则切换到指定数据库。  MongoDB 删除数据库">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-30T12:44:48.018Z">
+<meta property="og:updated_time" content="2019-07-03T09:10:58.817Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB基础知识">
+<meta name="twitter:description" content="MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。  MongoDB 创建数据库语法: 1use DATABASE_NAME  如果数据库不存在，则创建数据库，否则切换到指定数据库。  MongoDB 删除数据库">
 
 
 
@@ -343,7 +346,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  1.2k
                 </span>
               
 
@@ -359,7 +362,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -380,7 +383,84 @@
       
 
       
-        
+        <p>MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。<br>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</p>
+<hr>
+<h4 id="MongoDB-创建数据库"><a href="#MongoDB-创建数据库" class="headerlink" title="MongoDB 创建数据库"></a>MongoDB 创建数据库</h4><p>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use DATABASE_NAME</span><br></pre></td></tr></table></figure>
+
+<p>如果数据库不存在，则创建数据库，否则切换到指定数据库。</p>
+<hr>
+<h4 id="MongoDB-删除数据库"><a href="#MongoDB-删除数据库" class="headerlink" title="MongoDB 删除数据库"></a>MongoDB 删除数据库</h4><p>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.dropDatabase()</span><br></pre></td></tr></table></figure>
+
+<p>删除当前数据库，默认为 test，你可以使用 db 命令查看当前数据库名。</p>
+<hr>
+<h4 id="MongoDB-创建集合"><a href="#MongoDB-创建集合" class="headerlink" title="MongoDB 创建集合"></a>MongoDB 创建集合</h4><p>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.createCollection(name, options)</span><br></pre></td></tr></table></figure>
+
+<h5 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明:"></a>参数说明:</h5><p>name: 要创建的集合名称<br>options: 可选参数, 指定有关内存大小及索引的选项</p>
+<hr>
+<h4 id="MongoDB-删除集合"><a href="#MongoDB-删除集合" class="headerlink" title="MongoDB 删除集合"></a>MongoDB 删除集合</h4><p>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.drop()</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="MongoDB-插入文档"><a href="#MongoDB-插入文档" class="headerlink" title="MongoDB 插入文档"></a>MongoDB 插入文档</h4><p>文档的数据结构和 JSON 基本一样。<br>所有存储在集合中的数据都是 BSON 格式。<br>BSON 是一种类似 JSON 的二进制形式的存储格式，是 Binary JSON 的简称。</p>
+<h5 id="插入文档"><a href="#插入文档" class="headerlink" title="插入文档"></a>插入文档</h5><p>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.COLLECTION_NAME.insert(document)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="MongoDB-更新文档"><a href="#MongoDB-更新文档" class="headerlink" title="MongoDB 更新文档"></a>MongoDB 更新文档</h4><h5 id="update-方法"><a href="#update-方法" class="headerlink" title="update() 方法"></a>update() 方法</h5><p>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">db.collection.update(</span><br><span class="line">   &lt;query&gt;,</span><br><span class="line">   &lt;update&gt;,</span><br><span class="line">   &#123;</span><br><span class="line">     upsert: &lt;boolean&gt;,</span><br><span class="line">     multi: &lt;boolean&gt;,</span><br><span class="line">     writeConcern: &lt;document&gt;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h5 id="参数说明-1"><a href="#参数说明-1" class="headerlink" title="参数说明:"></a>参数说明:</h5><p>query : update的查询条件，类似sql update查询内where后面的。<br>update : update的对象和一些更新的操作符（如$,$inc…）等，也可以理解为sql update查询内set后面的<br>upsert : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。<br>multi : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。<br>writeConcern :可选，抛出异常的级别。</p>
+<h5 id="save-方法"><a href="#save-方法" class="headerlink" title="save() 方法"></a>save() 方法</h5><p>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">db.collection.save(</span><br><span class="line">   &lt;document&gt;,</span><br><span class="line">   &#123;</span><br><span class="line">     writeConcern: &lt;document&gt;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h5 id="参数说明-2"><a href="#参数说明-2" class="headerlink" title="参数说明:"></a>参数说明:</h5><p>document : 文档数据。<br>writeConcern : 可选，抛出异常的级别。</p>
+<hr>
+<h4 id="MongoDB-删除文档"><a href="#MongoDB-删除文档" class="headerlink" title="MongoDB 删除文档"></a>MongoDB 删除文档</h4><p>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 如果你的 MongoDB 是 2.6 以前的版本</span><br><span class="line">db.collection.remove(</span><br><span class="line">   &lt;query&gt;,</span><br><span class="line">   &lt;justOne&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">// 如果你的 MongoDB 是 2.6 以后(包括2.6)的版本</span><br><span class="line">db.collection.remove(</span><br><span class="line">   &lt;query&gt;,</span><br><span class="line">   &#123;</span><br><span class="line">     justOne: &lt;boolean&gt;,</span><br><span class="line">     writeConcern: &lt;document&gt;</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h5 id="参数说明-3"><a href="#参数说明-3" class="headerlink" title="参数说明:"></a>参数说明:</h5><p>query :（可选）删除的文档的条件。<br>justOne : （可选）如果设为 true 或 1，则只删除一个文档，如果不设置该参数，或使用默认值 false，则删除所有匹配条件的文档。<br>writeConcern :（可选）抛出异常的级别。</p>
+<hr>
+<h4 id="MongoDB-查询文档"><a href="#MongoDB-查询文档" class="headerlink" title="MongoDB 查询文档"></a>MongoDB 查询文档</h4><h5 id="find-方法以非结构化的方式来显示所有文档，语法"><a href="#find-方法以非结构化的方式来显示所有文档，语法" class="headerlink" title="find() 方法以非结构化的方式来显示所有文档，语法:"></a>find() 方法以非结构化的方式来显示所有文档，语法:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.collection.find(query, projection)</span><br></pre></td></tr></table></figure>
+
+<p>query : 可选，使用查询操作符指定查询条件<br>projection : 可选，使用投影操作符指定返回的键。查询时返回文档中所有键值，只需省略该参数即可（默认省略）。</p>
+<h5 id="pretty-方法以格式化的方式来显示所有文档，语法"><a href="#pretty-方法以格式化的方式来显示所有文档，语法" class="headerlink" title="pretty() 方法以格式化的方式来显示所有文档，语法:"></a>pretty() 方法以格式化的方式来显示所有文档，语法:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.col.find().pretty()</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="MongoDB-条件操作符"><a href="#MongoDB-条件操作符" class="headerlink" title="MongoDB 条件操作符"></a>MongoDB 条件操作符</h4><h5 id="MongoDB-gt-大于操作符-gt"><a href="#MongoDB-gt-大于操作符-gt" class="headerlink" title="MongoDB (&gt;) 大于操作符 - $gt"></a>MongoDB (&gt;) 大于操作符 - $gt</h5><p>如果你想获取 “col” 集合中 “likes” 大于 100 的数据，你可以使用以下命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.find(&#123;likes : &#123;$gt : 100&#125;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="MongoDB-lt-小于操作符-lt"><a href="#MongoDB-lt-小于操作符-lt" class="headerlink" title="MongoDB (&lt;) 小于操作符 - $lt"></a>MongoDB (&lt;) 小于操作符 - $lt</h5><p>如果你想获取”col”集合中 “likes” 小于 100 的数据，你可以使用以下命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.find(&#123;likes : &#123;$lt : 100&#125;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="MongoDB（-gt-）大于等于操作符-gte"><a href="#MongoDB（-gt-）大于等于操作符-gte" class="headerlink" title="MongoDB（&gt;=）大于等于操作符 - $gte"></a>MongoDB（&gt;=）大于等于操作符 - $gte</h5><p>如果你想获取”col”集合中 “likes” 大于等于 100 的数据，你可以使用以下命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.find(&#123;likes : &#123;$gte : 100&#125;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="MongoDB-lt-小于等于操作符-lte"><a href="#MongoDB-lt-小于等于操作符-lte" class="headerlink" title="MongoDB (&lt;=) 小于等于操作符 - $lte"></a>MongoDB (&lt;=) 小于等于操作符 - $lte</h5><p>如果你想获取”col”集合中 “likes” 小于等于 100 的数据，你可以使用以下命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.find(&#123;likes : &#123;$lte : 100&#125;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="MongoDB-使用-lt-和-gt-查询-lt-和-gt"><a href="#MongoDB-使用-lt-和-gt-查询-lt-和-gt" class="headerlink" title="MongoDB 使用 (&lt;) 和 (&gt;) 查询 - $lt 和 $gt"></a>MongoDB 使用 (&lt;) 和 (&gt;) 查询 - $lt 和 $gt</h5><p>如果你想获取”col”集合中 “likes” 大于100，小于 200 的数据，你可以使用以下命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.col.find(&#123;likes : &#123;$lt :200, $gt : 100&#125;&#125;)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="MongoDB-Limit-方法"><a href="#MongoDB-Limit-方法" class="headerlink" title="MongoDB Limit() 方法"></a>MongoDB Limit() 方法</h4><p>如果你需要在MongoDB中读取指定数量的数据记录，可以使用MongoDB的Limit方法，limit()方法接受一个数字参数，该参数指定从MongoDB中读取的记录条数。</p>
+<p>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.COLLECTION_NAME.find().limit(NUMBER)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="MongoDB-Skip-方法"><a href="#MongoDB-Skip-方法" class="headerlink" title="MongoDB Skip() 方法"></a>MongoDB Skip() 方法</h4><p>我们除了可以使用limit()方法来读取指定数量的数据外，还可以使用skip()方法来跳过指定数量的数据，skip方法同样接受一个数字参数作为跳过的记录条数。</p>
+<p>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.COLLECTION_NAME.find().limit(NUMBER).skip(NUMBER)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="MongoDB-sort-方法"><a href="#MongoDB-sort-方法" class="headerlink" title="MongoDB sort() 方法"></a>MongoDB sort() 方法</h4><p>在 MongoDB 中使用 sort() 方法对数据进行排序，sort() 方法可以通过参数指定排序的字段，并使用 1 和 -1 来指定排序的方式，其中 1 为升序排列，而 -1 是用于降序排列。</p>
+<p>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.COLLECTION_NAME.find().sort(&#123;KEY:1&#125;)</span><br></pre></td></tr></table></figure>
+
+<hr>
+
       
     </div>
     
@@ -419,6 +499,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/10/Mongoose基础知识/" rel="prev" title="Mongoose基础知识">
+                Mongoose基础知识 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -475,8 +559,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -493,7 +586,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -504,7 +597,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -515,7 +608,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -555,6 +648,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB-创建数据库"><span class="nav-number">1.</span> <span class="nav-text">MongoDB 创建数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB-删除数据库"><span class="nav-number">2.</span> <span class="nav-text">MongoDB 删除数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB-创建集合"><span class="nav-number">3.</span> <span class="nav-text">MongoDB 创建集合</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#参数说明"><span class="nav-number">3.1.</span> <span class="nav-text">参数说明:</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB-删除集合"><span class="nav-number">4.</span> <span class="nav-text">MongoDB 删除集合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB-插入文档"><span class="nav-number">5.</span> <span class="nav-text">MongoDB 插入文档</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#插入文档"><span class="nav-number">5.1.</span> <span class="nav-text">插入文档</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB-更新文档"><span class="nav-number">6.</span> <span class="nav-text">MongoDB 更新文档</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#update-方法"><span class="nav-number">6.1.</span> <span class="nav-text">update() 方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参数说明-1"><span class="nav-number">6.2.</span> <span class="nav-text">参数说明:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#save-方法"><span class="nav-number">6.3.</span> <span class="nav-text">save() 方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参数说明-2"><span class="nav-number">6.4.</span> <span class="nav-text">参数说明:</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB-删除文档"><span class="nav-number">7.</span> <span class="nav-text">MongoDB 删除文档</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#参数说明-3"><span class="nav-number">7.1.</span> <span class="nav-text">参数说明:</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB-查询文档"><span class="nav-number">8.</span> <span class="nav-text">MongoDB 查询文档</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#find-方法以非结构化的方式来显示所有文档，语法"><span class="nav-number">8.1.</span> <span class="nav-text">find() 方法以非结构化的方式来显示所有文档，语法:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pretty-方法以格式化的方式来显示所有文档，语法"><span class="nav-number">8.2.</span> <span class="nav-text">pretty() 方法以格式化的方式来显示所有文档，语法:</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB-条件操作符"><span class="nav-number">9.</span> <span class="nav-text">MongoDB 条件操作符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#MongoDB-gt-大于操作符-gt"><span class="nav-number">9.1.</span> <span class="nav-text">MongoDB (&gt;) 大于操作符 - $gt</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#MongoDB-lt-小于操作符-lt"><span class="nav-number">9.2.</span> <span class="nav-text">MongoDB (&lt;) 小于操作符 - $lt</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#MongoDB（-gt-）大于等于操作符-gte"><span class="nav-number">9.3.</span> <span class="nav-text">MongoDB（&gt;=）大于等于操作符 - $gte</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#MongoDB-lt-小于等于操作符-lte"><span class="nav-number">9.4.</span> <span class="nav-text">MongoDB (&lt;=) 小于等于操作符 - $lte</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#MongoDB-使用-lt-和-gt-查询-lt-和-gt"><span class="nav-number">9.5.</span> <span class="nav-text">MongoDB 使用 (&lt;) 和 (&gt;) 查询 - $lt 和 $gt</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB-Limit-方法"><span class="nav-number">10.</span> <span class="nav-text">MongoDB Limit() 方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB-Skip-方法"><span class="nav-number">11.</span> <span class="nav-text">MongoDB Skip() 方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB-sort-方法"><span class="nav-number">12.</span> <span class="nav-text">MongoDB sort() 方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -591,7 +700,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共13.2k字</span>
+  <span class="post-count">博客全站共15.5k字</span>
 </div>
 
 
