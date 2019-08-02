@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。  AJAX的过程1234567891011121314151617181920// 创建XMLHttpRequest对象,也就是创建一个异步调用对象var xhr = new XMLHttpRequest();// 创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息// 设置响应HTTP请求状态变化的函数">
+<meta name="description" content="AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。">
 <meta name="keywords" content="AJAX">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AJAX">
 <meta property="og:url" content="http://yoursite.com/2018/10/28/AJAX/index.html">
 <meta property="og:site_name" content="凌晨四点的拖拉机">
-<meta property="og:description" content="AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。  AJAX的过程1234567891011121314151617181920// 创建XMLHttpRequest对象,也就是创建一个异步调用对象var xhr = new XMLHttpRequest();// 创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息// 设置响应HTTP请求状态变化的函数">
+<meta property="og:description" content="AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-24T07:42:29.330Z">
+<meta property="og:updated_time" content="2019-08-01T15:17:44.961Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AJAX">
-<meta name="twitter:description" content="AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。  AJAX的过程1234567891011121314151617181920// 创建XMLHttpRequest对象,也就是创建一个异步调用对象var xhr = new XMLHttpRequest();// 创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息// 设置响应HTTP请求状态变化的函数">
+<meta name="twitter:description" content="AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。">
 
 
 
@@ -384,7 +384,8 @@
 
       
         <p>AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。</p>
-<hr>
+<a id="more"></a>
+
 <h4 id="AJAX的过程"><a href="#AJAX的过程" class="headerlink" title="AJAX的过程"></a>AJAX的过程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 创建XMLHttpRequest对象,也就是创建一个异步调用对象</span><br><span class="line">var xhr = new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">// 创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息</span><br><span class="line">// 设置响应HTTP请求状态变化的函数</span><br><span class="line">xhr.open(&apos;get&apos;, &apos;aabb.php&apos;, true);</span><br><span class="line"></span><br><span class="line">// 发送HTTP请求</span><br><span class="line">xhr.send(null);</span><br><span class="line"></span><br><span class="line">// 获取异步调用返回的数据</span><br><span class="line">xhr.onreadystatechange = function() &#123;</span><br><span class="line">    if(xhr.readyState==4) &#123;</span><br><span class="line">        if(xhr.status==200) &#123;</span><br><span class="line">            console.log(xhr.responseText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 使用JavaScript和DOM实现局部刷新</span><br></pre></td></tr></table></figure>
 
 <hr>
@@ -516,7 +517,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -527,7 +528,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -538,7 +539,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -630,7 +631,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共16.6k字</span>
+  <span class="post-count">博客全站共17.1k字</span>
 </div>
 
 
