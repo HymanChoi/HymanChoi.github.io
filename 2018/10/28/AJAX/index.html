@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="凌晨四点的拖拉机">
 <meta property="og:description" content="AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-01T15:17:44.961Z">
+<meta property="og:updated_time" content="2019-08-20T14:20:46.449Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AJAX">
 <meta name="twitter:description" content="AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。">
@@ -346,7 +346,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  243
+                  242
                 </span>
               
 
@@ -386,10 +386,13 @@
         <p>AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。</p>
 <a id="more"></a>
 
-<h4 id="AJAX的过程"><a href="#AJAX的过程" class="headerlink" title="AJAX的过程"></a>AJAX的过程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 创建XMLHttpRequest对象,也就是创建一个异步调用对象</span><br><span class="line">var xhr = new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">// 创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息</span><br><span class="line">// 设置响应HTTP请求状态变化的函数</span><br><span class="line">xhr.open(&apos;get&apos;, &apos;aabb.php&apos;, true);</span><br><span class="line"></span><br><span class="line">// 发送HTTP请求</span><br><span class="line">xhr.send(null);</span><br><span class="line"></span><br><span class="line">// 获取异步调用返回的数据</span><br><span class="line">xhr.onreadystatechange = function() &#123;</span><br><span class="line">    if(xhr.readyState==4) &#123;</span><br><span class="line">        if(xhr.status==200) &#123;</span><br><span class="line">            console.log(xhr.responseText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 使用JavaScript和DOM实现局部刷新</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="AJAX的过程"><a href="#AJAX的过程" class="headerlink" title="AJAX的过程"></a>AJAX的过程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// 创建XMLHttpRequest对象</span><br><span class="line">var xhr = new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">// 创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及是否异步</span><br><span class="line">xhr.open(&apos;get&apos;, &apos;aabb.php&apos;, true);</span><br><span class="line"></span><br><span class="line">// 发送HTTP请求</span><br><span class="line">xhr.send(null);</span><br><span class="line"></span><br><span class="line">// 获取异步调用返回的数据</span><br><span class="line">xhr.onreadystatechange = function() &#123;</span><br><span class="line">    if(xhr.readyState==4) &#123;</span><br><span class="line">        if(xhr.status==200) &#123;</span><br><span class="line">            console.log(xhr.responseText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 使用JavaScript和DOM实现局部刷新</span><br></pre></td></tr></table></figure>
 
 <hr>
 <h4 id="AJAX返回的状态-xhr-readyState"><a href="#AJAX返回的状态-xhr-readyState" class="headerlink" title="AJAX返回的状态[xhr.readyState]"></a>AJAX返回的状态[xhr.readyState]</h4><p>0 － （未初始化）还没有调用send()方法<br>1 － （载入）已调用send()方法，正在发送请求<br>2 － （载入完成）send()方法执行完成，已经接收到全部响应内容<br>3 － （交互）正在解析响应内容<br>4 － （完成）响应内容解析完成，可以在客户端调用了</p>
+<hr>
+<h4 id="AJAX返回的状态-xhr-status"><a href="#AJAX返回的状态-xhr-status" class="headerlink" title="AJAX返回的状态[xhr.status]"></a>AJAX返回的状态[xhr.status]</h4><p>200 － 成功<br>3XX － 重定向<br>4XX － 客户端错误<br>5XX － 服务器错误</p>
 <hr>
 
       
@@ -588,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#AJAX的过程"><span class="nav-number">1.</span> <span class="nav-text">AJAX的过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AJAX返回的状态-xhr-readyState"><span class="nav-number">2.</span> <span class="nav-text">AJAX返回的状态[xhr.readyState]</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#AJAX的过程"><span class="nav-number">1.</span> <span class="nav-text">AJAX的过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AJAX返回的状态-xhr-readyState"><span class="nav-number">2.</span> <span class="nav-text">AJAX返回的状态[xhr.readyState]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AJAX返回的状态-xhr-status"><span class="nav-number">3.</span> <span class="nav-text">AJAX返回的状态[xhr.status]</span></a></li></ol></div>
             
 
           </div>
@@ -631,7 +634,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共17.1k字</span>
+  <span class="post-count">博客全站共16.7k字</span>
 </div>
 
 
