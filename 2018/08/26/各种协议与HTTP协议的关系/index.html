@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="凌晨四点的拖拉机">
 <meta property="og:description" content="负责传输的IP协议，确保可靠性的TCP协议，负责域名解析的DNS服务与Http协议的关系。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-20T14:20:33.501Z">
+<meta property="og:updated_time" content="2019-08-21T14:28:42.125Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="各种协议与HTTP协议的关系">
 <meta name="twitter:description" content="负责传输的IP协议，确保可靠性的TCP协议，负责域名解析的DNS服务与Http协议的关系。">
@@ -387,17 +387,32 @@
 <a id="more"></a>
 
 <hr>
-<h4 id="目的："><a href="#目的：" class="headerlink" title="目的："></a>目的：</h4><p>想浏览 <a href="http://demo.jp/xss" target="_blank" rel="noopener">http://demo.jp/xss</a> Web页面</p>
-<h4 id="过程："><a href="#过程：" class="headerlink" title="过程："></a>过程：</h4><p>客户端 ➡ DNS<br>（告诉我demo.jp的IP地址吧）</p>
-<p>DNS ➡ 客户端<br>（demo.jp对应的IP地址时20X.189.105.112）</p>
-<p>客户端 ➡ demo.jp服务器（IP地址：20X.189.105.112）</p>
-<h4 id="各协议职责："><a href="#各协议职责：" class="headerlink" title="各协议职责："></a>各协议职责：</h4><h6 id="HTTP协议的职责"><a href="#HTTP协议的职责" class="headerlink" title="HTTP协议的职责"></a>HTTP协议的职责</h6><p>生成针对目标Web服务器的HTTP请求报文<br>（请给我 <a href="http://demo.jp/xss" target="_blank" rel="noopener">http://demo.jp/xss</a> 页面的资源）</p>
-<h6 id="TCP协议的职责"><a href="#TCP协议的职责" class="headerlink" title="TCP协议的职责"></a>TCP协议的职责</h6><p>为了方便通信，将HTTP请求报文分割成报文段<br>按序号分为多个报文段<br>把每个报文段可靠的传给对方</p>
-<h6 id="IP协议的职责（路由器）"><a href="#IP协议的职责（路由器）" class="headerlink" title="IP协议的职责（路由器）"></a>IP协议的职责（路由器）</h6><p>搜索对方的地址，一边中转一边传送</p>
-<h6 id="TCP协议的职责-1"><a href="#TCP协议的职责-1" class="headerlink" title="TCP协议的职责"></a>TCP协议的职责</h6><p>从对方那里收到的报文段<br>重组到达的报文段<br>按序号以原来的顺序重组请求报文</p>
-<h6 id="HTTP协议的职责-1"><a href="#HTTP协议的职责-1" class="headerlink" title="HTTP协议的职责"></a>HTTP协议的职责</h6><p>对Web服务器请求的内容的处理<br>（原来时想要这台计算机上的/xss/资源啊）</p>
+<h4 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h4><p>想浏览 <a href="http://demo.jp/xss" target="_blank" rel="noopener">http://demo.jp/xss</a> Web页面</p>
 <hr>
-<p>请求的处理结果也同样利用TCP/IP通信协议向用户进行回传</p>
+<h4 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h4><ol>
+<li><p>客户端 ➡ DNS<br>（告诉我demo.jp的IP地址吧）</p>
+</li>
+<li><p>DNS ➡ 客户端<br>（demo.jp对应的IP地址时20X.189.105.112）</p>
+</li>
+<li><p>客户端 ➡ demo.jp服务器<br>（IP地址：20X.189.105.112）</p>
+</li>
+</ol>
+<hr>
+<h4 id="各协议职责"><a href="#各协议职责" class="headerlink" title="各协议职责"></a>各协议职责</h4><h5 id="HTTP协议的职责"><a href="#HTTP协议的职责" class="headerlink" title="HTTP协议的职责"></a>HTTP协议的职责</h5><p>生成针对目标Web服务器的HTTP请求报文<br>（请给我 <a href="http://demo.jp/xss" target="_blank" rel="noopener">http://demo.jp/xss</a> 页面的资源）</p>
+<h5 id="TCP协议的职责"><a href="#TCP协议的职责" class="headerlink" title="TCP协议的职责"></a>TCP协议的职责</h5><ol>
+<li>为了方便通信，将HTTP请求报文分割成报文段</li>
+<li>按序号分为多个报文段</li>
+<li>把每个报文段可靠地传给对方</li>
+</ol>
+<h5 id="IP协议的职责（路由器）"><a href="#IP协议的职责（路由器）" class="headerlink" title="IP协议的职责（路由器）"></a>IP协议的职责（路由器）</h5><p>搜索对方的地址，一边中转一边传送</p>
+<h5 id="TCP协议的职责-1"><a href="#TCP协议的职责-1" class="headerlink" title="TCP协议的职责"></a>TCP协议的职责</h5><ol>
+<li>从对方那里收到的报文段</li>
+<li>重组到达的报文段</li>
+<li>按序号以原来的顺序重组请求报文</li>
+</ol>
+<h5 id="HTTP协议的职责-1"><a href="#HTTP协议的职责-1" class="headerlink" title="HTTP协议的职责"></a>HTTP协议的职责</h5><p>对Web服务器请求的内容的处理<br>（原来时想要这台计算机上的/xss/资源啊</p>
+<hr>
+<h4 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h4><p>请求的处理结果也同样利用TCP/IP通信协议向用户进行回传</p>
 <hr>
 
       
@@ -602,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#目的："><span class="nav-number">1.</span> <span class="nav-text">目的：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过程："><span class="nav-number">2.</span> <span class="nav-text">过程：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#各协议职责："><span class="nav-number">3.</span> <span class="nav-text">各协议职责：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#HTTP协议的职责"><span class="nav-number">3.0.1.</span> <span class="nav-text">HTTP协议的职责</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#TCP协议的职责"><span class="nav-number">3.0.2.</span> <span class="nav-text">TCP协议的职责</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP协议的职责（路由器）"><span class="nav-number">3.0.3.</span> <span class="nav-text">IP协议的职责（路由器）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#TCP协议的职责-1"><span class="nav-number">3.0.4.</span> <span class="nav-text">TCP协议的职责</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#HTTP协议的职责-1"><span class="nav-number">3.0.5.</span> <span class="nav-text">HTTP协议的职责</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#目的"><span class="nav-number">1.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过程"><span class="nav-number">2.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#各协议职责"><span class="nav-number">3.</span> <span class="nav-text">各协议职责</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#HTTP协议的职责"><span class="nav-number">3.1.</span> <span class="nav-text">HTTP协议的职责</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TCP协议的职责"><span class="nav-number">3.2.</span> <span class="nav-text">TCP协议的职责</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#IP协议的职责（路由器）"><span class="nav-number">3.3.</span> <span class="nav-text">IP协议的职责（路由器）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TCP协议的职责-1"><span class="nav-number">3.4.</span> <span class="nav-text">TCP协议的职责</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#HTTP协议的职责-1"><span class="nav-number">3.5.</span> <span class="nav-text">HTTP协议的职责</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PS"><span class="nav-number">4.</span> <span class="nav-text">PS</span></a></li></ol></div>
             
 
           </div>
@@ -645,7 +660,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共17.4k字</span>
+  <span class="post-count">博客全站共17.3k字</span>
 </div>
 
 
