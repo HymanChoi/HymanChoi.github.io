@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="凌晨四点的拖拉机">
 <meta property="og:description" content="HTTP 定义了一组请求方法, 以表明要对给定资源执行的操作。指示针对给定资源要执行的期望动作. 虽然他们也可以是名词, 但这些请求方法有时被称为HTTP动词. 每一个请求方法都实现了不同的语义, 但一些共同的特征由一组共享：: 例如一个请求方法可以是 safe, idempotent, 或 cacheable.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-26T15:59:41.337Z">
+<meta property="og:updated_time" content="2019-08-26T16:04:54.256Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP请求方法">
 <meta name="twitter:description" content="HTTP 定义了一组请求方法, 以表明要对给定资源执行的操作。指示针对给定资源要执行的期望动作. 虽然他们也可以是名词, 但这些请求方法有时被称为HTTP动词. 每一个请求方法都实现了不同的语义, 但一些共同的特征由一组共享：: 例如一个请求方法可以是 safe, idempotent, 或 cacheable.">
@@ -346,7 +346,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  498
+                  499
                 </span>
               
 
@@ -396,15 +396,17 @@
 <h4 id="TRACE"><a href="#TRACE" class="headerlink" title="TRACE"></a>TRACE</h4><p>TRACE方法沿着到目标资源的路径执行一个消息环回测试。</p>
 <h4 id="PATCH"><a href="#PATCH" class="headerlink" title="PATCH"></a>PATCH</h4><p>PATCH方法用于对资源应用部分修改。</p>
 <hr>
-<h4 id="GET与POST的区别"><a href="#GET与POST的区别" class="headerlink" title="GET与POST的区别"></a>GET与POST的区别</h4><p>GET在浏览器回退时是无害的，而POST会再次提交请求。</p>
-<p>GET产生的URL地址可以被Bookmark，而POST不可以。</p>
-<p>GET请求会被浏览器主动cache，而POST不会，除非手动设置。</p>
-<p>GET请求只能进行url编码，而POST支持多种编码方式。</p>
-<p>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。</p>
-<p>GET请求在URL中传送的参数是有长度限制的，而POST么有。</p>
-<p>对参数的数据类型，GET只接受ASCII字符，而POST没有限制。</p>
-<p>GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。</p>
-<p>GET参数通过URL传递，POST放在Request body中。</p>
+<h4 id="GET与POST的区别"><a href="#GET与POST的区别" class="headerlink" title="GET与POST的区别"></a>GET与POST的区别</h4><ol>
+<li>GET在浏览器回退时是无害的，而POST会再次提交请求。</li>
+<li>GET产生的URL地址可以被Bookmark，而POST不可以。</li>
+<li>GET请求会被浏览器主动cache，而POST不会，除非手动设置。</li>
+<li>GET请求只能进行url编码，而POST支持多种编码方式。</li>
+<li>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。</li>
+<li>GET请求在URL中传送的参数是有长度限制的，而POST没有。</li>
+<li>对参数的数据类型，GET只接受ASCII字符，而POST没有限制。</li>
+<li>GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。</li>
+<li>GET参数通过URL传递，POST放在Request body中。</li>
+</ol>
 <hr>
 
       
